@@ -6,10 +6,13 @@ import tempfile
 import webbrowser as wb
 import requests
 import easyocr
+import customtkinter as ctk
+
+
 
 screenshot = ImageGrab.grab()
 ocr_reader = None
-
+ocr_reader = easyocr.Reader(['en'], gpu=False)
 # helll ya this way works much better then that blooted mess of a code
 
 class bigimagebox:
@@ -104,18 +107,22 @@ class bluat:
     def __init__(self, root, img_path):
         self.root = root
         self.img_path = img_path
-
         self.root.geometry("600x600")
 
-        tk.Button(root, text='🔍', command=self.search).pack()
-        tk.Button(root, text='💬', command=self.ocr).pack()
+        self.frame = ctk.CTkFrame(self.root)
+        self.frame.pack(fill="x", padx=10, pady=10)
+
+        ctk.CTkButton(self.frame, text='🔍', command=self.search).pack(side="left", padx=5)
+        ctk.CTkButton(self.frame, text='💬', command=self.ocr).pack(side="left", padx=5)
+
+        self.textbox = ctk.CTkTextbox(self.root)
+        self.textbox.pack(fill="both", expand=True, padx=10, pady=10)
 
     def search(self):
         YesImageMe(self.img_path)
 
     def ocr(self):
-        textmebro(self.img_path)
-
+        text = textmebro(self.img_path)
 
 class YesImageMe:
     def __init__(self, img_path):
@@ -130,13 +137,16 @@ class YesImageMe:
         link = f"https://imgops.com/{direct_url}"
         wb.open(link)
 
-class textmebro:
-    def __init__(self, img_path):
-        self.reader = easyocr.Reader(['ch_sim','en'])
-        self.result = self.reader.readtext(img_path)
+def textmebro(img_path):
+    global ocr_reader
 
-        text = "\n".join([r[1] for r in self.result])
-        print(text)
+    if ocr_reader is None:
+        ocr_reader = easyocr.Reader(['en'], gpu=False)
+
+    result = ocr_reader.readtext(img_path)
+    text = "\n".join([r[1] for r in result])
+
+    return text
 
 if __name__ == "__main__":
     boxa = tk.Tk()
