@@ -1,6 +1,6 @@
 # linux-lens
 
-![Under Construction GIF]([https://media.giphy.com/media/3o7abB06u9bNzA8LC8/giphy.gif](https://media.tenor.com/42bcTn0iuVgAAAAj/under-construction-pikachu.gif))
+![Under Construction GIF](https://media.tenor.com/42bcTn0iuVgAAAAj/under-construction-pikachu.gif)
 
 > the Android  Circle to Search. is really usefull so i wanted one for my linux to 
 ---
