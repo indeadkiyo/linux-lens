@@ -14,11 +14,11 @@ Built because I wanted to learn. Also because I'm too lazy to type things someti
 
 ##  Features (that actually work... mostly)
 
-| 🔍 Search via ImgOps | ✅
-| 📝 OCR text extraction | ✅  
-| 🌙 Dark mode | ✅ |there only dark mode|
-| 💬 speech to text | ❌ 
-| 🌐 Translator | ❌ | future me's problem |
+- Search via ImgOps | ✅
+- OCR text extraction | ✅ 
+- Dark mode | ✅ |there only dark mode|
+- speech to text | ❌
+- Translator | ❌ | future me's problem |
 
 ---
 
