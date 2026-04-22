@@ -60,7 +60,7 @@ requests
 
 ---
 
-## 🙏 Credits
+##  Credits
 
 - **Me** – for the bad ideas and worse code
 - **GPT** – for fixing my GUI so it doesn't look like Windows XP
@@ -69,11 +69,11 @@ requests
 
 ---
 
-## 📜 License
+## License
 
 Do whatever you want. Learn from it. Break it. Fix it. Make it better.  
 Just don't blame me if it didnt work
 ---
 
+![hola](https://media1.tenor.com/m/ps-qhH6Wea4AAAAd/heavens-lost-property.gif)
 
-There you go. Fun, honest, and it sounds like **you**. Drop the GIF link when you find one and I'll tell you how to embed it properly if you need help.
