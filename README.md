@@ -3,7 +3,9 @@
 ![Under Construction GIF](https://media.tenor.com/42bcTn0iuVgAAAAj/under-construction-pikachu.gif)
 
 > the Android  Circle to Search. is really usefull so i wanted one for my linux to
+:
 > made it to work with any distro since mostly relay on py and not system api's
+:
 > the code is open so if there is bugs or etc you can modify it yourself or tell me and i can try to fix it 
 ---
 ## What this is:
