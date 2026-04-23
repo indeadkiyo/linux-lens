@@ -14,7 +14,7 @@ A desktop app that lets you:
 1. Draw a  little rectangle on your screen
 2. Either **search** what's inside or run **OCR** to get the text (ps:offline so use that for privet stuff)
 Built because I wanted to learn. Also because I'm too lazy to type text on images myself.
-3. ()[https://github.com/indeadkiyo/linux-lens/blob/main/test-2.mp4]
+3. [](https://github.com/indeadkiyo/linux-lens/blob/main/test-2.mp4)
 ---
 
 ##  Features (that actually work... mostly)
