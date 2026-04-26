@@ -11,12 +11,15 @@ import cv2
 import threading
 import time
 import re
+import pyttsx3
+
+
 
 time = 10
 
 screenshot = ImageGrab.grab()
 
-# helll ya this way works much better then that blooted mess of a code
+# helll ya this way works much better 
 #added way more then i though i would 
 
 ctk.set_appearance_mode("dark")
@@ -91,7 +94,7 @@ class bigimagebox:
 
         if right - left < 5 or bottom - top < 5:
             messagebox.showwarning(
-                "Selection Too Small", "pls draw something bigger than you high."
+                "Selection Too Small", "pls draw something bigger than you own high."
             )
             return
 
@@ -116,6 +119,8 @@ class bluat:
     def __init__(self, root, img_path):
         self.root = root
         self.img_path = img_path
+
+        self.tts_engine = pyttsx3.init()
 
         self.root.geometry("700x700")
         self.root.title("ScreenSearch")
@@ -146,6 +151,15 @@ class bluat:
             hover_color="#94e2d5",
             width=100
         ).pack(side="left", padx=5, pady=5)
+
+        ctk.CTkButton(
+            self.toolbar,
+            text="speech",
+            command=self.speech,
+            fg_color="#FFF200",
+            hover_color="#9C9207",
+            width=100
+        ).pack(side="left",padx=5,pady=5)
 
         ctk.CTkButton(
             self.toolbar,
@@ -223,7 +237,23 @@ class bluat:
     def clear_text(self):
         self.textbox.delete("1.0", "end")
         self.status.configure(text="Cleared")
-        
+    
+    def _speak_worker(self, text):
+        self.tts_engine.say(text)
+        self.tts_engine.runAndWait()
+        self.root.after(0, lambda: self.status.configure(text="Done speaking"))
+
+
+    def speech(self):
+        text = self.textbox.get("1.0", "end").strip()
+
+        if not text:
+            self.status.configure(text="No text to read")
+            return
+
+        self.status.configure(text="Speaking...")
+        threading.Thread(target=self._speak_worker, args=(text,), daemon=True).start()
+
 class YesImageMe:
     def __init__(self, img_path):
         self.img_path = img_path
@@ -296,4 +326,5 @@ if __name__ == "__main__":
         root.mainloop()
     else:
         print("No image selected — nothing to upload.")
+
 
