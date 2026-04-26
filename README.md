@@ -27,6 +27,13 @@ Built because I wanted to learn. Also because I'm too lazy to type text on image
 
 ---
 
+## how to add the bin file :
+- look for where the shortcut in your windows manager is(eg: kde):
+-  settings -->keyboard-->shortcut--> select add new and set up the key you want 
+- idk others just search it up online
+
+---
+
 ##  What you need installed (no skipping)
 - Python
 - Poetry (https://python-poetry.org/)
