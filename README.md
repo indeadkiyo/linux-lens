@@ -22,7 +22,7 @@ Built because I wanted to learn. Also because I'm too lazy to type text on image
 - Search via ImgOps | ✅
 - OCR text extraction | ✅ 
 - Dark mode | ✅ |there only dark mode|
-- speech to text | ❌
+- speech to text | ✅ (only test file)
 - Translator | ❌ | future me's problem |
 
 ---
